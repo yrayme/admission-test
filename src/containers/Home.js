@@ -35,16 +35,18 @@ export default function Home(props) {
   };
 
   return (
-    <Box px={{sm: 10, xs: 2}} py={4}>
+    <Box>
       {tableRows.length > 0 ? (
-        <EnhancedTable
-          rowsProp={tableRows}
-          handleEditButton={handleEditButton}
-          setLoading={setLoading}
-          setOpenForm={setOpenForm}
-          openForm={openForm}
-          pokemonTypesOptions={pokemonTypesOptions}
-        />
+        <Box px={{sm: 10, xs: 2}} py={4}>
+          <EnhancedTable
+            rowsProp={tableRows}
+            handleEditButton={handleEditButton}
+            setLoading={setLoading}
+            setOpenForm={setOpenForm}
+            openForm={openForm}
+            pokemonTypesOptions={pokemonTypesOptions}
+          />
+        </Box>
       ) : (
         <Loading/>
       )}
