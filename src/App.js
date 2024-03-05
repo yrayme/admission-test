@@ -53,7 +53,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" style={{background: "#f5f5f5", height: "100vh"}}>
       {loading && <Loading/>}
       {error && <Error msg={error.response.data}/>}
       <Routes

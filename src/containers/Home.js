@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import EnhancedTable from "../components/Table";
 import Loading from "../components/Loading";
 import { useEffect } from "react";
+import { Box } from "@mui/material";
 
 export default function Home(props) {
   const { tableRows, setLoading, pokemonTypesOptions } = props;
@@ -34,7 +35,7 @@ export default function Home(props) {
   };
 
   return (
-    <div>
+    <Box px={{sm: 10, xs: 2}} py={4}>
       {tableRows.length > 0 ? (
         <EnhancedTable
           rowsProp={tableRows}
@@ -47,6 +48,6 @@ export default function Home(props) {
       ) : (
         <Loading/>
       )}
-    </div>
+    </Box>
   );
 }
